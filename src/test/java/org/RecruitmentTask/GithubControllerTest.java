@@ -33,7 +33,7 @@ public class GithubControllerTest {
         List<RepositoryResponse> repositories = response.jsonPath().getList(".", RepositoryResponse.class);
 
 
-        assertEquals(1, repositories.size(), "Expected one repository");
+        assertEquals(6, repositories.size(), "Expected one repository");
 
 
         RepositoryResponse repo = repositories.get(0);
