@@ -1,73 +1,27 @@
-# quarkus-demo
+This is a recruitment task for Atipera, involving the development of an API designed to retrieve and provide structured data about a user's public repositories. The API should efficiently fetch repository details, ensuring accuracy and clarity while maintaining optimal performance.
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+## Technologies
 
-If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
+The project is built using the following technologies and tools:
 
-## Running the application in dev mode
+  - **quarkus-rest**: Provides support for developing RESTful APIs using JAX-RS..
+  - **quarkus-arc**: Enables dependency injection using CDI (Contexts and Dependency Injection.
+  - **quarkus-rest-client-jackson**: Provides a REST client for making HTTP requests.
 
-You can run your application in dev mode that enables live coding using:
+## Installation
 
-```shell script
-./mvnw quarkus:dev
-```
+To run the project locally, follow these steps:
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
-
-## Packaging and running the application
-
-The application can be packaged using:
-
-```shell script
-./mvnw package
-```
-
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
-
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
-
-If you want to build an _über-jar_, execute the following command:
-
-```shell script
-./mvnw package -Dquarkus.package.jar.type=uber-jar
-```
-
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
-
-## Creating a native executable
-
-You can create a native executable using:
-
-```shell script
-./mvnw package -Dnative
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using:
-
-```shell script
-./mvnw package -Dnative -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./target/quarkus-demo-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult <https://quarkus.io/guides/maven-tooling>.
-
-## Related Guides
-
-- REST Client ([guide](https://quarkus.io/guides/rest-client)): Call REST services
-- RESTEasy Classic ([guide](https://quarkus.io/guides/resteasy)): REST endpoint framework implementing Jakarta REST and more
-
-## Provided Code
-
-### REST Client
-
-Invoke different services through REST with JSON
-
-[Related guide section...](https://quarkus.io/guides/rest-client)
-
-### RESTEasy JAX-RS
-
-Easily start your RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/MarcinGarcin/recruitment_task.git
+   cd recruitment_task
+2. Build the project using Maven:
+   ```bash
+   mvn clean install
+3. Run the application:
+   ```bash
+   mvn quarkus:dev
+4. The backend API will be available at
+   ```bash
+   http://localhost:8080/github/repos/
