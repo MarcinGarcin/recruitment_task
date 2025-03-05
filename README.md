@@ -12,16 +12,16 @@ The project is built using the following technologies and tools:
 
 To run the project locally, follow these steps:
 
-1. Clone the repository:
+1. Clone the repository:  
    ```bash
    git clone https://github.com/MarcinGarcin/recruitment_task.git
-   cd Math-Trainer
+   cd recruitment_task
 2. Build the project using Maven:
    ```bash
    mvn clean install
 3. Run the application:
    ```bash
-   mvn spring-boot:run
+   mvn quarkus:dev
 4. The backend API will be available at
    ```bash
    http://localhost:8080/github/repos/
