@@ -37,7 +37,7 @@ public class GithubControllerTest {
 
 
         RepositoryResponse repo = repositories.get(0);
-        assertEquals("Hello-World", repo.repositoryName, "Repository name should be 'Hello-World'");
-        assertEquals("octocat", repo.repositoryOwnerLogin, "Repository owner should be 'octocat'");
+        assertEquals("AiFromScratch", repo.repositoryName, "Repository name should be 'Hello-World'");
+        assertEquals("MarcinGarcin", repo.repositoryOwnerLogin, "Repository owner should be 'octocat'");
     }
 }
