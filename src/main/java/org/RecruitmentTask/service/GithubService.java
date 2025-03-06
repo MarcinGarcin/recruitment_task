@@ -73,7 +73,6 @@ public class GithubService {
                             .build()
             );
         } catch (IOException ioException) {
-            // Handle case if serialization fails
             return new WebApplicationException(
                     "Internal Server Error",
                     Response.Status.INTERNAL_SERVER_ERROR
