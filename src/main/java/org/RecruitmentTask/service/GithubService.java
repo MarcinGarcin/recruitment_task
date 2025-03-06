@@ -27,8 +27,8 @@ public class GithubService {
 
     public Uni<List<RepositoryResponse>> getUserRepositories(String username) {
         return Uni.createFrom().item(() -> fetchRepositories(username))
-                .onFailure(WebApplicationException.class).recoverWithUni(e -> Uni.createFrom().failure(e))  // Propagate WebApplicationException
-                .onFailure().recoverWithUni(e -> Uni.createFrom().failure(handleGenericException(e))); // Handle other exceptions
+                .onFailure(WebApplicationException.class).recoverWithUni(e -> Uni.createFrom().failure(e))
+                .onFailure().recoverWithUni(e -> Uni.createFrom().failure(handleGenericException(e)));
     }
 
     private List<RepositoryResponse> fetchRepositories(String username) {
@@ -65,11 +65,11 @@ public class GithubService {
 
         try {
             String jsonResponse = objectMapper.writeValueAsString(errorResponse);
-            // Create a WebApplicationException with the JSON response
+
             return new WebApplicationException(
                     Response.status(Response.Status.INTERNAL_SERVER_ERROR)
-                            .entity(jsonResponse) // Return the JSON string
-                            .type("application/json") // Specify JSON type
+                            .entity(jsonResponse)
+                            .type("application/json")
                             .build()
             );
         } catch (IOException ioException) {
